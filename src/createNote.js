@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { putItem } from "./libs/v3-beta";
+import { putItem } from "./libs/v2";
 import { success, failure } from "./libs/response";
 
 const handler = async event => {

@@ -6,11 +6,13 @@ import {
   UpdateItemCommand
 } from "@aws-sdk/client-dynamodb";
 
-const client = new DynamoDBClient();
+const getClient = () => new DynamoDBClient();
 
-export const putItem = async params => client.send(new PutItemCommand(params));
+export const putItem = async params =>
+  getClient().send(new PutItemCommand(params));
 export const deleteItem = async params =>
-  client.send(new DeleteItemCommand(params));
-export const getItem = async params => client.send(new GetItemCommand(params));
+  getClient().send(new DeleteItemCommand(params));
+export const getItem = async params =>
+  getClient().send(new GetItemCommand(params));
 export const updateItem = async params =>
-  client.send(new UpdateItemCommand(params));
+  getClient().send(new UpdateItemCommand(params));

@@ -1,8 +1,20 @@
 import DynamoDB from "aws-sdk/clients/dynamodb";
 
-const client = new DynamoDB();
+const getClient = () => new DynamoDB();
 
-export const putItem = async params => client.putItem(params).promise();
-export const deleteItem = async params => client.deleteItem(params).promise();
-export const getItem = async params => client.getItem(params).promise();
-export const updateItem = async params => client.updateItem(params).promise();
+export const putItem = async params =>
+  getClient()
+    .putItem(params)
+    .promise();
+export const deleteItem = async params =>
+  getClient()
+    .deleteItem(params)
+    .promise();
+export const getItem = async params =>
+  getClient()
+    .getItem(params)
+    .promise();
+export const updateItem = async params =>
+  getClient()
+    .updateItem(params)
+    .promise();

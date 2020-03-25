@@ -29,8 +29,8 @@
 
   ```console
           Asset      Size  Chunks             Chunk Names
-  createNote.js  96.9 KiB       0  [emitted]  createNote
+  createNote.js    97 KiB       0  [emitted]  createNote
   deleteNote.js  96.8 KiB       1  [emitted]  deleteNote
-     getNote.js  96.8 KiB       2  [emitted]  getNote
+     getNote.js  96.9 KiB       2  [emitted]  getNote
   updateNote.js  96.9 KiB       3  [emitted]  updateNote
   ```

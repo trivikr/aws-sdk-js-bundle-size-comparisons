@@ -1,4 +1,4 @@
-import { deleteItem } from "./libs/v3-beta";
+import { deleteItem } from "./libs/v2";
 import { success, failure } from "./libs/response";
 
 const handler = async event => {
