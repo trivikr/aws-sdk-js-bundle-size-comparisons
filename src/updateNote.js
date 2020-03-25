@@ -1,4 +1,4 @@
-import { updateItem } from "./libs/v2";
+import { updateItem } from "./libs/v3-preview";
 import { success, failure } from "./libs/response";
 
 const handler = async event => {

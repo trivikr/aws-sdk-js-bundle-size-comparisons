@@ -14,3 +14,13 @@
      getNote.js  306 KiB       2  [emitted]  getNote
   updateNote.js  306 KiB       3  [emitted]  updateNote
   ```
+
+- libs/v3-preview (VERSION: @aws-sdk/client-dynamodb-node@0.1.0-preview.9)
+
+```console
+        Asset     Size  Chunks             Chunk Names
+createNote.js  154 KiB       0  [emitted]  createNote
+deleteNote.js  154 KiB       1  [emitted]  deleteNote
+   getNote.js  154 KiB       2  [emitted]  getNote
+updateNote.js  154 KiB       3  [emitted]  updateNote
+```
