@@ -2,9 +2,7 @@
   "name": "aws-sdk-js-bundle-size-comparisons",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack",
-    "test": "jest",
-    "cdk": "cdk"
+    "build": "webpack"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
