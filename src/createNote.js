@@ -1,6 +1,5 @@
 import crypto from "crypto";
-import dynamoDBClient from "./libs/dynamoDB";
-import { PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { putItem } from "./libs/v2";
 import { success, failure } from "./libs/response";
 
 const handler = async event => {
@@ -26,7 +25,7 @@ const handler = async event => {
   }
 
   try {
-    await dynamoDBClient.send(new PutItemCommand(params));
+    await putItem(params);
     return success(params.Item);
   } catch (e) {
     return failure({ status: false });

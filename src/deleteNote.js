@@ -1,6 +1,5 @@
-import dynamoDBClient from "./libs/dynamoDB";
+import { deleteItem } from "./libs/v2";
 import { success, failure } from "./libs/response";
-import { DeleteItemCommand } from "@aws-sdk/client-dynamodb";
 
 const handler = async event => {
   const params = {
@@ -16,7 +15,7 @@ const handler = async event => {
 
   try {
     // @ts-ignore
-    await dynamoDBClient.send(new DeleteItemCommand(params));
+    await deleteItem(params);
     return success({ status: true });
   } catch (e) {
     return failure({ status: false });
