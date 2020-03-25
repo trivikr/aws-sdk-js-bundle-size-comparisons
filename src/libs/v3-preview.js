@@ -1,4 +1,10 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb-node";
+import {
+  DynamoDBClient,
+  PutItemCommand,
+  DeleteItemCommand,
+  GetItemCommand,
+  UpdateItemCommand
+} from "@aws-sdk/client-dynamodb-node";
 
 const client = new DynamoDBClient();
 
