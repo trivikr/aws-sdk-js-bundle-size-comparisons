@@ -1,4 +1,4 @@
-import { updateItem } from "@aws-sdk/v3-beta";
+import { getClient, updateItem } from "@aws-sdk/v3-beta";
 
 const updateNote = async (tableName, noteId, content) => {
   const params = {
@@ -14,7 +14,8 @@ const updateNote = async (tableName, noteId, content) => {
   };
 
   try {
-    const response = await updateItem(params);
+    const client = getClient();
+    const response = await updateItem(client, params);
     return response.Attributes;
   } catch (e) {
     return false;

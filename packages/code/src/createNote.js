@@ -1,4 +1,4 @@
-import { putItem } from "@aws-sdk/v3-beta";
+import { getClient, putItem } from "@aws-sdk/v3-beta";
 
 const createNote = async (tableName, noteId, content) => {
   const params = {
@@ -9,7 +9,8 @@ const createNote = async (tableName, noteId, content) => {
     }
   };
   try {
-    await putItem(params);
+    const client = getClient();
+    await putItem(client, params);
     return true;
   } catch (e) {
     console.log(e);

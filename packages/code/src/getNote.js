@@ -1,4 +1,4 @@
-import { getItem } from "@aws-sdk/v3-beta";
+import { getClient, getItem } from "@aws-sdk/v3-beta";
 
 const getNote = async (tableName, noteId) => {
   const params = {
@@ -9,7 +9,8 @@ const getNote = async (tableName, noteId) => {
   };
 
   try {
-    const result = (await getItem(params)) || {};
+    const client = getClient();
+    const result = (await getItem(client, params)) || {};
     return result.Item;
   } catch (e) {
     return false;

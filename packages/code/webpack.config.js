@@ -25,7 +25,8 @@ module.exports = {
   target: "node",
 
   // Set the webpack mode
-  mode: process.env.NODE_ENV || "production",
+  mode: "development",
+  // mode: process.env.NODE_ENV || "production",
 
   plugins: [new CleanWebpackPlugin()]
 };

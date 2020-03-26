@@ -1,4 +1,4 @@
-import { deleteItem } from "@aws-sdk/v3-beta";
+import { getClient, deleteItem } from "@aws-sdk/v3-beta";
 
 const deleteNote = async (tableName, noteId) => {
   const params = {
@@ -9,7 +9,8 @@ const deleteNote = async (tableName, noteId) => {
   };
 
   try {
-    await deleteItem(params);
+    const client = getClient();
+    await deleteItem(client, params);
     return true;
   } catch (e) {
     return false;
