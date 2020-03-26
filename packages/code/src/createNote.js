@@ -1,4 +1,4 @@
-import { putItem } from "@aws-sdk/v3-preview";
+import { putItem } from "@aws-sdk/v3-beta";
 
 const createNote = async (tableName, noteId, content) => {
   const params = {

@@ -1,4 +1,4 @@
-import { getItem } from "@aws-sdk/v3-preview";
+import { getItem } from "@aws-sdk/v3-beta";
 
 const getNote = async (tableName, noteId) => {
   const params = {

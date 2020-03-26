@@ -1,4 +1,4 @@
-import { updateItem } from "@aws-sdk/v3-preview";
+import { updateItem } from "@aws-sdk/v3-beta";
 
 const updateNote = async (tableName, noteId, content) => {
   const params = {
