@@ -6,7 +6,7 @@
 
 ## bundle sizes when commands are imported from:
 
-- libs/v2 (VERSION: aws-sdk@2.646.0)
+- @aws-sdk/v2 (VERSION: aws-sdk@2.646.0)
 
   ```console
           Asset     Size  Chunks             Chunk Names
@@ -16,7 +16,7 @@
   updateNote.js  306 KiB       3  [emitted]  updateNote
   ```
 
-- libs/v3-preview (VERSION: @aws-sdk/client-dynamodb-node@0.1.0-preview.9)
+- @aws-sdk/v3-preview (VERSION: @aws-sdk/client-dynamodb-node@0.1.0-preview.9)
 
   ```console
           Asset     Size  Chunks             Chunk Names
@@ -26,7 +26,7 @@
   updateNote.js  154 KiB       3  [emitted]  updateNote
   ```
 
-- libs/v3-beta (VERSION: @aws-sdk/client-dynamodb@1.0.0-beta.1)
+- @aws-sdk/v3-beta (VERSION: @aws-sdk/client-dynamodb@1.0.0-beta.1)
 
   ```console
           Asset      Size  Chunks             Chunk Names

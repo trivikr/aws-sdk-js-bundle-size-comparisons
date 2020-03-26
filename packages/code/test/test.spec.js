@@ -4,7 +4,7 @@ import { getNote } from "../src/getNote";
 import { updateNote } from "../src/updateNote";
 import { deleteNote } from "../src/deleteNote";
 
-jest.setTimeout(100000);
+jest.setTimeout(500000);
 
 describe("testing CRUD operations on DynamoDB", () => {
   const TableName = `notes-table-${Math.floor(Math.random() * 10 ** 10)}`;

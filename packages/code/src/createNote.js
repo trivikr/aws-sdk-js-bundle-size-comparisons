@@ -1,4 +1,4 @@
-import { putItem } from "./libs/v3-beta";
+import { putItem } from "@aws-sdk/v3-beta";
 
 const createNote = async (tableName, noteId, content) => {
   const params = {
@@ -12,6 +12,7 @@ const createNote = async (tableName, noteId, content) => {
     await putItem(params);
     return true;
   } catch (e) {
+    console.log(e);
     return false;
   }
 };
