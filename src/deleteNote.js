@@ -1,25 +1,19 @@
 import { deleteItem } from "./libs/v3-beta";
-import { success, failure } from "./libs/response";
 
-const handler = async event => {
+const deleteNote = async (tableName, noteId) => {
   const params = {
-    TableName: process.env.NOTES_TABLE_NAME,
-    // 'Key' defines the partition key and sort key of the item to be removed
-    // - 'noteId': path parameter
+    TableName: tableName,
     Key: {
-      noteId: {
-        S: event.pathParameters.id
-      }
+      noteId: { S: noteId }
     }
   };
 
   try {
-    // @ts-ignore
     await deleteItem(params);
-    return success({ status: true });
+    return true;
   } catch (e) {
-    return failure({ status: false });
+    return false;
   }
 };
 
-export { handler };
+export { deleteNote };

@@ -1,36 +1,24 @@
 import { updateItem } from "./libs/v3-beta";
-import { success, failure } from "./libs/response";
 
-const handler = async event => {
-  const data = JSON.parse(event.body || "{}");
+const updateNote = async (tableName, noteId, content) => {
   const params = {
-    TableName: process.env.NOTES_TABLE_NAME,
-    // 'Key' defines the partition key and sort key of the item to be updated
-    // - 'noteId': path parameter
+    TableName: tableName,
     Key: {
-      noteId: { S: event.pathParameters.id }
+      noteId: { S: noteId }
     },
-    // 'UpdateExpression' defines the attributes to be updated
-    // 'ExpressionAttributeValues' defines the value in the update expression
     UpdateExpression: "SET content = :content",
     ExpressionAttributeValues: {
-      ":content": {
-        S: data.content
-      }
+      ":content": { S: content }
     },
-    // 'ReturnValues' specifies if and how to return the item's attributes,
-    // where ALL_NEW returns all attributes of the item after the update; you
-    // can inspect 'result' below to see how it works with different settings
     ReturnValues: "ALL_NEW"
   };
 
   try {
-    // @ts-ignore
-    await updateItem(params);
-    return success({ status: true });
+    const response = await updateItem(params);
+    return response.Attributes;
   } catch (e) {
-    return failure({ status: false });
+    return false;
   }
 };
 
-export { handler };
+export { updateNote };
