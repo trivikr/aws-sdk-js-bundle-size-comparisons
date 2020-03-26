@@ -1,4 +1,4 @@
-import { deleteItem } from "@aws-sdk/v2";
+import { deleteItem } from "@aws-sdk/v3-preview";
 
 const deleteNote = async (tableName, noteId) => {
   const params = {

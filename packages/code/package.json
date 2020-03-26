@@ -19,6 +19,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@aws-sdk/v2": "^0.1.0"
+    "@aws-sdk/v2": "^0.1.0",
+    "@aws-sdk/v3-preview": "^0.1.0"
   }
 }

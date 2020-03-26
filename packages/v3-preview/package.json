@@ -1,0 +1,9 @@
+{
+  "name": "@aws-sdk/v3-preview",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb-node": "^0.1.0-preview.9"
+  }
+}

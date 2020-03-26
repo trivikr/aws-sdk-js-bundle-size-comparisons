@@ -6,7 +6,7 @@ import {
   UpdateItemCommand
 } from "@aws-sdk/client-dynamodb-node";
 
-const getClient = () => new DynamoDBClient();
+const getClient = () => new DynamoDBClient({});
 
 export const putItem = async params =>
   getClient().send(new PutItemCommand(params));
