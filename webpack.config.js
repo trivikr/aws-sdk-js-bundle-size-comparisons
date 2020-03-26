@@ -2,17 +2,17 @@
 const glob = require("glob");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const entryArray = glob.sync("./src/*.js");
+// Bug https://github.com/webpack/webpack/issues/4453
+const entryArray = glob
+  .sync("./src/*.js")
+  .map(item => item.replace("./src/", "").replace(".js", ""));
 
-module.exports = {
-  entry: entryArray.reduce((acc, item) => {
-    const name = item.replace("./src/", "").replace(".js", "");
-    acc[name] = item;
-    return acc;
-  }, {}),
+module.exports = entryArray.map(name => ({
+  entry: {
+    [name]: `./src/${name}.js`
+  },
 
   output: {
-    filename: "[name].js",
     libraryTarget: "commonjs"
   },
 
@@ -28,4 +28,4 @@ module.exports = {
   mode: process.env.NODE_ENV || "production",
 
   plugins: [new CleanWebpackPlugin()]
-};
+}));
