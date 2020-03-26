@@ -1,0 +1,9 @@
+{
+  "name": "@aws-sdk/v2",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.646.0"
+  }
+}
