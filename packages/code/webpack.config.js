@@ -28,4 +28,22 @@ module.exports = entryArray.map((name) => ({
 
   // Set the webpack mode
   mode: process.env.NODE_ENV || "production",
+
+  // Add the TypeScript loader
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              configFile: "tsconfig.build.json",
+            },
+          },
+        ],
+        exclude: /node_modules/,
+      },
+    ],
+  },
 }));

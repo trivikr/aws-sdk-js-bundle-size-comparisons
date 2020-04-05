@@ -3,7 +3,8 @@
     "declaration": true,
     "allowJs": true,
     "target": "ES2018",
-    "module": "commonjs",
+    "module": "es6",
+    "moduleResolution": "Node",
     "strict": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
@@ -14,9 +15,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "strictPropertyInitialization": true,
-    "rootDir": "src",
-    "outDir": "dist"
+    "strictPropertyInitialization": true
   },
   "exclude": ["node_modules", "dist"]
 }

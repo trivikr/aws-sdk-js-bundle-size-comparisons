@@ -15,12 +15,13 @@
     "babel-jest": "^25.2.0",
     "glob": "^7.1.6",
     "jest": "^25.2.0",
+    "ts-loader": "^6.2.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "@aws-sdk/v2": "0.1.0",
-    "@aws-sdk/v3-preview": "0.1.0",
-    "@aws-sdk/v3-beta": "0.1.0"
+    "@aws-sdk/v3-beta": "0.1.0",
+    "@aws-sdk/v3-preview": "0.1.0"
   }
 }
