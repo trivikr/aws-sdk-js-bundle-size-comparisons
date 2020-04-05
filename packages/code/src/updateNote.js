@@ -4,13 +4,13 @@ const updateNote = async (tableName, noteId, content) => {
   const params = {
     TableName: tableName,
     Key: {
-      noteId: { S: noteId }
+      noteId: { S: noteId },
     },
     UpdateExpression: "SET content = :content",
     ExpressionAttributeValues: {
-      ":content": { S: content }
+      ":content": { S: content },
     },
-    ReturnValues: "ALL_NEW"
+    ReturnValues: "ALL_NEW",
   };
 
   try {

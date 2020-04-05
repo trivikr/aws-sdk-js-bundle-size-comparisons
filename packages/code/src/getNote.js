@@ -4,8 +4,8 @@ const getNote = async (tableName, noteId) => {
   const params = {
     TableName: tableName,
     Key: {
-      noteId: { S: noteId }
-    }
+      noteId: { S: noteId },
+    },
   };
 
   try {
