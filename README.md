@@ -9,11 +9,11 @@
 - libs/v2 (VERSION: aws-sdk@2.646.0)
 
   ```console
-          Asset     Size  Chunks             Chunk Names
-  createNote.js  306 KiB       0  [emitted]  createNote
-  deleteNote.js  306 KiB       1  [emitted]  deleteNote
-     getNote.js  306 KiB       2  [emitted]  getNote
-  updateNote.js  306 KiB       3  [emitted]  updateNote
+  $ ls -lh dist | awk '{print $6,$10}'
+  305K createNote.js
+  305K deleteNote.js
+  305K getNote.js
+  305K updateNote.js
   ```
 
 - libs/v3-preview (VERSION: @aws-sdk/client-dynamodb-node@0.1.0-preview.9)
