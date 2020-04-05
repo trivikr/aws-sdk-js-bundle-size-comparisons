@@ -17,20 +17,20 @@ describe("testing CRUD operations on DynamoDB", () => {
         AttributeDefinitions: [
           {
             AttributeName: "noteId",
-            AttributeType: "S"
-          }
+            AttributeType: "S",
+          },
         ],
         KeySchema: [
           {
             AttributeName: "noteId",
-            KeyType: "HASH"
-          }
+            KeyType: "HASH",
+          },
         ],
         ProvisionedThroughput: {
           ReadCapacityUnits: 5,
-          WriteCapacityUnits: 5
+          WriteCapacityUnits: 5,
         },
-        TableName
+        TableName,
       })
       .promise();
     await client.waitFor("tableExists", { TableName }).promise();

@@ -5,8 +5,8 @@ const createNote = async (tableName, noteId, content) => {
     TableName: tableName,
     Item: {
       noteId: { S: noteId },
-      content: { S: content }
-    }
+      content: { S: content },
+    },
   };
   try {
     await putItem(params);
