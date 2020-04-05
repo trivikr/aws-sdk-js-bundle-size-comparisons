@@ -1,5 +1,3 @@
 import { getClient } from "./getClient";
-import { PutItemCommand } from "@aws-sdk/client-dynamodb";
 
-export const putItem = async (params) =>
-  getClient().send(new PutItemCommand(params));
+export const putItem = async (params) => getClient().putItem(params).promise();

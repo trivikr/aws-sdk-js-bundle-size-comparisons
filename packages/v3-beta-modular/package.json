@@ -1,0 +1,10 @@
+{
+  "name": "@aws-sdk/v3-beta-modular",
+  "version": "0.1.0",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^1.0.0-beta.1"
+  },
+  "sideEffects": false
+}

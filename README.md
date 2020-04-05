@@ -28,7 +28,27 @@
   153K updateNote.js
   ```
 
+- @aws-sdk/v3-preview-modular (VERSION: @aws-sdk/client-dynamodb-node@0.1.0-preview.9)
+
+  ```console
+  $ ls -lh dist | awk '{print $6,$10}'
+  153K createNote.js
+  153K deleteNote.js
+  153K getNote.js
+  153K updateNote.js
+  ```
+
 - @aws-sdk/v3-beta (VERSION: @aws-sdk/client-dynamodb@1.0.0-beta.3)
+
+  ```console
+  $ ls -lh dist | awk '{print $6,$10}'
+  285K createNote.js
+  285K deleteNote.js
+  285K getNote.js
+  285K updateNote.js
+  ```
+
+- @aws-sdk/v3-beta-modular (VERSION: @aws-sdk/client-dynamodb@1.0.0-beta.3)
 
   ```console
   $ ls -lh dist | awk '{print $6,$10}'
