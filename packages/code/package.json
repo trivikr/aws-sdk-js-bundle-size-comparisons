@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "clean": "rm -rf dist",
+    "build": "yarn clean && webpack",
     "test": "jest"
   },
   "devDependencies": {
@@ -12,7 +13,6 @@
     "@babel/preset-env": "^7.9.0",
     "aws-sdk": "^2.646.0",
     "babel-jest": "^25.2.0",
-    "clean-webpack-plugin": "^3.0.0",
     "glob": "^7.1.6",
     "jest": "^25.2.0",
     "webpack": "^4.42.1",
