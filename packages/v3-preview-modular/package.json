@@ -1,10 +1,16 @@
 {
   "name": "@aws-sdk/v3-preview-modular",
   "version": "0.1.0",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "@aws-sdk/client-dynamodb-node": "^0.1.0-preview.9"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
 }
